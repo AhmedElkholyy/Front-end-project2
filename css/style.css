@@ -1,0 +1,781 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: rgb(3, 3, 3);
+}
+a {
+  text-decoration: none;
+}
+/* //////////////////////////////////////////////////header//////////////////////////////////////////////////////// */
+header {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.logo img {
+  width: 150px;
+}
+.table {
+  position: absolute;
+  width: 500px;
+  height: 300px;
+  background: -webkit-linear-gradient(
+    left,
+    yellow,
+    rgb(219, 219, 2),
+    gold,
+    rgb(168, 143, 0)
+  );
+  border-radius: 20px;
+
+  transform: scale(0, 0);
+  transition: 0.8s;
+
+  margin-top: 6px;
+}
+th {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 5px;
+}
+.table table {
+  margin: auto;
+  border-spacing: 25px;
+  text-align: center;
+}
+.shops:hover .table {
+  transform: scale(1, 1);
+}
+
+.header-list li {
+  display: inline-block;
+  line-height: 30px;
+  margin-left: 30px;
+  font-size: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 25px;
+  position: relative;
+  cursor: pointer;
+}
+.header-list li a {
+  color: gold;
+}
+.header-icons i {
+  color: gold;
+}
+.header-icons {
+  line-height: 80px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.header-icons sub {
+  background-color: gold;
+  border-radius: 5px;
+  color: black;
+}
+.header-icons p {
+  display: inline;
+  color: gold;
+}
+.header-list li::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 90%;
+  left: 0;
+  right: 100;
+  border-top: 2px solid gold;
+  border-bottom: 2px solid gold;
+  transition: 0.3s;
+  transition-delay: 0.3s;
+}
+.header-list li:hover::after {
+  width: 100%;
+  height: 90%;
+  right: 0;
+  left: 100;
+}
+.header-list li::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  left: 0;
+  right: 0;
+  border-right: 2px solid gold;
+  border-left: 2px solid gold;
+  transition: 0.3s;
+}
+
+.header-list li:hover::before {
+  top: 0;
+  bottom: 0;
+}
+
+/* //////////////////////////////////////////////////////////main////////////////////////////////////////// */
+.photo-container {
+  width: 80%;
+  height: 80vh;
+  margin: auto;
+}
+.photo {
+  background-image: url(../images/wallpaperflare.com_wallpaper.jpg);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  margin-top: 30px;
+}
+.photo-overlay {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.photo-overlay p {
+  font-size: 50px;
+  text-shadow: 5px 1px 10px gold;
+  color: white;
+  position: absolute;
+  top: 5%;
+  left: 2%;
+}
+.photo-overlay button {
+  width: 150px;
+  height: 45px;
+  background-color: gold;
+  color: black;
+  position: absolute;
+  font-size: 20px;
+  border-radius: 10px;
+  border: 1px solid;
+
+  top: 70%;
+  left: 5%;
+  cursor: pointer;
+  transition: 0.7s;
+}
+.photo-overlay button:hover {
+  background-color: white;
+  box-shadow: 1px 1px 50px 0.1px white;
+}
+/* //////////////////////////////section1//////////////////////////// */
+
+.section1-title {
+  color: gold;
+  text-align: center;
+  width: 320px;
+  margin: auto;
+  margin-top: 50px;
+}
+.line {
+  width: 100px;
+  height: 3px;
+  background-color: gold;
+  margin: auto;
+  margin-top: 10px;
+  transition: 0.7s;
+}
+.section1-title:hover .line {
+  width: 150px;
+}
+.section1-item1 img {
+  width: 100%;
+  height: 80%;
+}
+.section1-item1 p {
+  color: gold;
+}
+.section1-item1 h2 {
+  color: gold;
+}
+.section1-item1 button {
+  position: absolute;
+  right: 0;
+  top: 90%;
+  width: 30px;
+  height: 35px;
+  background-color: gold;
+  border: none;
+  visibility: hidden;
+  border-radius: 50px;
+}
+
+.section1-item1:hover button {
+  visibility: visible;
+  cursor: pointer;
+}
+.section1-item1 button:hover {
+  background-color: white;
+  transition: 0.7s;
+}
+.section1-item1 {
+  position: relative;
+
+  height: 80%;
+  margin: auto;
+}
+.section1-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  grid-column-gap: 15px;
+  width: 80%;
+  margin: auto;
+  margin-top: 50px;
+}
+.section1-item2 {
+  background-color: yellow;
+  grid-column: 1/3;
+  padding-left: 15px;
+  position: relative;
+  height: 250px;
+  margin-top: 20px;
+  background: -webkit-linear-gradient(
+    left,
+    yellow,
+    rgb(219, 219, 2),
+    gold,
+    rgb(168, 143, 0)
+  );
+  border-radius: 20px;
+}
+.section1-item2 h2 {
+  display: inline;
+}
+.section1-item2 i {
+  font-size: 50px;
+}
+.section1-item2 .label {
+  padding-left: 50px;
+}
+.section1-item2 .para {
+  margin-top: 15px;
+}
+.line1 {
+  background-color: black;
+  height: 2px;
+  width: 50px;
+  position: absolute;
+  right: 0;
+  margin-right: 10px;
+  margin-top: 45px;
+}
+.line2 {
+  background-color: black;
+  height: 2px;
+  width: 50px;
+  position: absolute;
+  right: 70px;
+  margin-top: 45px;
+}
+.line3 {
+  background-color: black;
+  height: 2px;
+  width: 50px;
+  position: absolute;
+  right: 130px;
+  margin-top: 45px;
+}
+.section1-item3 {
+  background-image: url(../images/image2.avif);
+  background-size: cover;
+  height: 250px;
+  margin-top: 20px;
+  border-radius: 20px;
+  transition: 0.7s;
+  background-position-y: 40%;
+}
+.section1-item3 p {
+  color: gold;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+.section1-item3 h3 {
+  color: gold;
+  padding-left: 20px;
+  font-size: x-large;
+}
+.section1-item3:hover {
+  transform: scale(1.07, 1.07);
+}
+.section1-item4 {
+  background-image: url(../images/image1.avif);
+  background-size: cover;
+  height: 250px;
+  margin-top: 20px;
+  border-radius: 20px;
+  transition: 0.7s;
+  background-position-y: 40%;
+}
+.section1-item4 p {
+  color: gold;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+.section1-item4 h3 {
+  color: gold;
+  padding-left: 20px;
+  font-size: x-large;
+}
+.section1-item4:hover {
+  transform: scale(1.07, 1.07);
+}
+/* ///////////////////////////////////////////////////section2//////////////////////////////////////////////////// */
+.section2-container {
+  display: flex;
+
+  color: gold;
+  position: relative;
+
+  width: 90%;
+  margin: auto;
+  margin-top: 50px;
+  justify-content: space-evenly;
+}
+.c {
+  width: 100%;
+  height: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.section2-container h2 {
+  text-align: center;
+  transform: translate(-50%, -50%);
+  top: 60%;
+  left: 50%;
+  width: 200px;
+  position: absolute;
+}
+.section2-container p {
+  text-align: center;
+  transform: translate(-50%, -50%);
+  top: 90%;
+  left: 50%;
+  position: absolute;
+  width: 250px;
+}
+.section2-container .item1 i {
+  text-align: center;
+
+  font-size: 30px;
+}
+.item1 {
+  border-right: 3px solid gold;
+  width: 400px;
+  height: 150px;
+  position: relative;
+}
+.s1s {
+  border: none;
+}
+.slot {
+  height: 40px;
+  width: 200px;
+  position: absolute;
+  margin: auto;
+  transform: translate(-50%, -50%);
+  top: 20%;
+  left: 50%;
+
+  margin-right: 50%;
+  overflow: hidden;
+  text-align: center;
+}
+
+.i2 {
+  top: 105%;
+  position: absolute;
+  transition: 0.7s;
+  color: white;
+
+  transform: translate(-50%, 0);
+}
+.i1 {
+  top: 0;
+  position: absolute;
+  transition: 0.7s;
+
+  transform: translate(-50%, 0);
+}
+.slot:hover .i2 {
+  top: 0;
+}
+.slot:hover .i1 {
+  top: -100%;
+}
+/* //////////////////////////////section 3/////////////////////////////////// */
+.sectionline {
+  width: 95%;
+  height: 0.1px;
+  background-color: gold;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.section3-title {
+  color: gold;
+  text-align: center;
+  width: 220px;
+  margin: auto;
+  margin-top: 50px;
+}
+.categories {
+  color: gold;
+  text-align: center;
+  margin-top: 30px;
+}
+.section3-title:hover .line {
+  width: 150px;
+}
+.section3 {
+  color: gold;
+  width: 100%;
+  position: relative;
+  height: 1300px;
+}
+.card-container {
+  perspective: 4500px;
+
+  margin-top: 100px;
+  position: absolute;
+  left: 12%;
+  display: grid;
+  grid-template-columns: repeat(3, 450px);
+  grid-template-rows: repeat(2, 450px);
+  grid-gap: 50px;
+}
+@media (max-width: 1366px) {
+  .card-container {
+    perspective: 4500px;
+
+    margin-top: 100px;
+    position: absolute;
+    left: 73px;
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    grid-template-rows: repeat(2, 450px);
+    grid-gap: 50px;
+  }
+}
+
+/* ////////////////////card 1/////////////////////// */
+
+.card1 .front1,
+.back1 {
+  width: 100%;
+  height: 100%;
+}
+.card1 {
+  position: relative;
+  transition: 0.7s;
+  transform-style: preserve-3d;
+  width: 400px;
+  height: 400px;
+  margin: auto;
+}
+
+.front1,
+.back1 {
+  position: absolute;
+  border-radius: 30px;
+}
+.front1 {
+  z-index: 1;
+  backface-visibility: hidden;
+  background-image: url(../images/section3/image.avif);
+  background-size: cover;
+  background-color: rgb(3, 3, 3);
+}
+.card1:hover {
+  transform: rotateY(180deg);
+}
+.back1 {
+  transform: rotateY(180deg);
+  background-image: url(../images/section3/back1.avif);
+  background-size: cover;
+}
+.overlay1 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.back1 h3 {
+  text-align: center;
+  margin-top: 50px;
+}
+.back1 p {
+  line-height: 30px;
+  font-size: large;
+  text-align: center;
+}
+
+/* //////////////////////card 2///////////////////////////////// */
+
+.card2 .front2,
+.back2 {
+  width: 100%;
+  height: 100%;
+}
+.card2 {
+  position: relative;
+  transition: 0.7s;
+  transform-style: preserve-3d;
+  width: 400px;
+  height: 400px;
+  margin: auto;
+}
+
+.front2,
+.back2 {
+  position: absolute;
+  border-radius: 30px;
+}
+.front2 {
+  z-index: 1;
+  backface-visibility: hidden;
+  background-image: url(../images/section3/itzy.avif);
+  background-size: cover;
+  background-color: rgb(3, 3, 3);
+}
+.card2:hover {
+  transform: rotateY(180deg);
+}
+.back2 {
+  transform: rotateY(180deg);
+  background-image: url(../images/section3/back2.jpg);
+  background-size: cover;
+}
+.overlay2 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.back2 h3 {
+  text-align: center;
+  margin-top: 50px;
+}
+.back2 p {
+  line-height: 30px;
+  font-size: large;
+  text-align: center;
+}
+
+/* ///////////////////////card 3/////////////////////// */
+.card3 .front3,
+.back3 {
+  width: 100%;
+  height: 100%;
+}
+.card3 {
+  position: relative;
+  transition: 0.7s;
+  transform-style: preserve-3d;
+  width: 400px;
+  height: 400px;
+  margin: auto;
+}
+
+.front3,
+.back3 {
+  position: absolute;
+  border-radius: 30px;
+}
+.front3 {
+  z-index: 1;
+  backface-visibility: hidden;
+  background-image: url(../images/section3/image2.png);
+  background-size: cover;
+  background-color: rgb(3, 3, 3);
+}
+.card3:hover {
+  transform: rotateY(180deg);
+}
+.back3 {
+  transform: rotateY(180deg);
+  background-image: url(../images/section3/back3.avif);
+  background-size: cover;
+}
+.overlay3 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.back3 h3 {
+  text-align: center;
+  margin-top: 50px;
+}
+.back3 p {
+  line-height: 30px;
+  font-size: large;
+  text-align: center;
+}
+.price {
+  font-size: larger;
+}
+
+/* ///////////////////////card 4//////////////////////////// */
+.card4 .front4,
+.back4 {
+  width: 100%;
+  height: 100%;
+}
+.card4 {
+  position: relative;
+  transition: 0.7s;
+  transform-style: preserve-3d;
+  width: 400px;
+  height: 400px;
+  margin: auto;
+}
+
+.front4,
+.back4 {
+  position: absolute;
+  border-radius: 30px;
+}
+.front4 {
+  z-index: 1;
+  backface-visibility: hidden;
+  background-image: url(../images/section3/wr.avif);
+  background-size: cover;
+  background-color: rgb(3, 3, 3);
+}
+.card4:hover {
+  transform: rotateY(180deg);
+}
+.back4 {
+  transform: rotateY(180deg);
+  background-image: url(../images/section3/back4.avif);
+  background-size: cover;
+}
+.overlay4 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.back4 h3 {
+  text-align: center;
+  margin-top: 50px;
+}
+.back4 p {
+  line-height: 30px;
+  font-size: large;
+  text-align: center;
+}
+
+/* /////////////////card 5///////////////////// */
+.card5 .front5,
+.back5 {
+  width: 100%;
+  height: 100%;
+}
+.card5 {
+  position: relative;
+  transition: 0.7s;
+  transform-style: preserve-3d;
+  width: 400px;
+
+  height: 400px;
+  margin: auto;
+}
+
+.front5,
+.back5 {
+  position: absolute;
+  border-radius: 30px;
+}
+.front5 {
+  z-index: 1;
+  backface-visibility: hidden;
+  background-image: url(../images/section3/g6.avif);
+  background-size: cover;
+  background-color: rgb(3, 3, 3);
+}
+.card5:hover {
+  transform: rotateY(180deg);
+}
+.back5 {
+  transform: rotateY(180deg);
+  background-image: url(../images/section3/back5.avif);
+  background-size: cover;
+}
+.overlay5 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.back5 h3 {
+  text-align: center;
+  margin-top: 50px;
+}
+.back5 p {
+  line-height: 30px;
+  font-size: large;
+  text-align: center;
+}
+
+/* ///////////////////card 6//////////////////// */
+.card6 .front6,
+.back6 {
+  width: 100%;
+  height: 100%;
+}
+.card6 {
+  position: relative;
+  transition: 0.7s;
+  transform-style: preserve-3d;
+  width: 400px;
+  margin: auto;
+  height: 400px;
+}
+
+.front6,
+.back6 {
+  position: absolute;
+  border-radius: 30px;
+}
+.front6 {
+  z-index: 1;
+  backface-visibility: hidden;
+  background-image: url(../images/section3/image.png);
+  background-size: cover;
+  background-color: rgb(3, 3, 3);
+}
+.card6:hover {
+  transform: rotateY(180deg);
+}
+.back6 {
+  transform: rotateY(180deg);
+  background-image: url(../images/section3/back6.jpg);
+  background-position-y: -50px;
+  background-size: cover;
+}
+.overlay6 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.back6 h3 {
+  text-align: center;
+  margin-top: 50px;
+}
+.back6 p {
+  line-height: 30px;
+  font-size: large;
+  text-align: center;
+}
